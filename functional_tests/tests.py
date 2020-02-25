@@ -5,14 +5,14 @@ from selenium.common.exceptions import WebDriverException
 import time
 
 MAX_WAIT = 10
+__browser_url = r'C:\Program Files (x86)\BraveSoftware\Brave-Browser\Application\brave.exe'
+chrome_options = webdriver.ChromeOptions()
+chrome_options.binary_location = __browser_url
+chrome_options.add_argument(r'--lang=zh-CN')
 
 class NewVisitorTest(LiveServerTestCase):
 
     def setUp(self):
-        __browser_url = r'C:\Program Files (x86)\BraveSoftware\Brave-Browser\Application\brave.exe'
-        chrome_options = webdriver.ChromeOptions()
-        chrome_options.binary_location = __browser_url
-        chrome_options.add_argument(r'--lang=zh-CN')
 
         self.browser = webdriver.Chrome(chrome_options=chrome_options)
 
