@@ -19,7 +19,7 @@ from django.conf.urls import url, include
 from lists import views as list_views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    #path('admin/', admin.site.urls),
     url(r'^$', list_views.home_page, name='home'),
     path('lists/', include('lists.urls')),
 ]
